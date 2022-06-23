@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Example - Converter</title>
+  </head>
+  <body>
+    <div>
+      <h1>Simple Area converter Hectares to Square Meter/Feet/Mile</h1>
+      <h1>The value is:</h1>
+      <div>
+        <h2 id="display">----</h2>
+      </div>
+      <div
+        style="background-color: red; width: 500px; height: 100px; 3px solid;"
+      >
+        <br />
+        <form action="#" method="">
+          <input type="number" id="hectares" placeholder="Enter in Hectares" />
+
+          <select id="units">
+            <option id="unit1" value="10000">in Square meter</option>
+            <option id="unit2" value="107639.150512">in Square Feet</option>
+            <option id="unit3" value="0.003861">in Square Mile</option>
+          </select>
+          <button onclick="convertArea()">Convert Now</button>
+          <br />
+          <br />
+
+          <button onclick="convertArea1()">Convert to Square meter</button>
+          <button onclick="convertArea2()">Convert to Square Feet</button>
+          <button onclick="convertArea3()">Convert to Square Mile</button>
+        </form>
+        <script>
+          function convertArea() {
+            let areahect = document.getElementById("hectares").value;
+            let sqrmtr = document.getElementById("units").value;
+
+            let areasqrmtr = Number(areahect) * Number(sqrmtr);
+
+            alert(areasqrmtr);
+          }
+
+          function convertArea1() {
+            let areahect = document.getElementById("hectares").value;
+            let sqrmtr = document.getElementById("units").value;
+
+            let areasqrmtr = Number(areahect) * Number(sqrmtr);
+
+            document.getElementById("display").innerHTML =
+              areasqrmtr + " Square Meter";
+          }
+          function convertArea2() {
+            let areahect = document.getElementById("hectares").value;
+            let sqrmtr = document.getElementById("unit2").value;
+
+            let areasqrmtr = Number(areahect) * Number(sqrmtr);
+            document.getElementById("display").innerHTML =
+              areasqrmtr + " Square Feet";
+          }
+          function convertArea3() {
+            let areahect = document.getElementById("hectares").value;
+            let sqrmtr = document.getElementById("unit3").value;
+
+            let areasqrmtr = Number(areahect) * Number(sqrmtr);
+
+            document.getElementById("display").innerHTML =
+              areasqrmtr + " Square kilometer";
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
